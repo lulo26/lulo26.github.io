@@ -15,8 +15,8 @@ canvas {
     left: 0;
     right: 0;
     
-    background-color: white;
-    border-radius: 20px;
+    /* background-color: white;
+    border-radius: 20px; */
 } 
 
 button{
@@ -38,11 +38,11 @@ button{
 } 
 
 button:hover{
-    background-color: #872236;
+    background-color: #7a1318;
 }
 
 button:active{
-    box-shadow: 0 5px #581c25;
+    box-shadow: 0 5px rgb(61, 19, 25);
     transform: translateY(4px);
 }
 

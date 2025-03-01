@@ -6,22 +6,25 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/style.css">
 </head>
-<body onload="init();">
+<body onload="initIdle();">
     <div class="container">
         <div id="animation_container">
             <canvas id="canvas"></canvas>
             <div id="dom_overlay_container">
             </div>
         </div>
-        <button id="clickMe">click me!</button>
+        <button id="clickMe">FEED ME!</button>
         <div class="div noselect">
-            <h2>Number of clicks:</h2>
+            <h2>drops of blood given:</h2>
             <div id="clickNum" class="noselect"><h1>0</h1></div>
         </div>
     </div>
-    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>  
+    <script src="assets/animations/open_mouth.js"></script>
+    <script src="assets/animations/close_mouth.js"></script>
+    <script src="assets/animations/eat.js"></script>
+    <script src="assets/animations/idle.js"></script>
     <script src="assets/main.js"></script>
-    <script src="assets/animations/dyellowMouse.js"></script>
     
 </body>
 </html>

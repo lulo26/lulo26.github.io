@@ -218,8 +218,8 @@
 	
 	
 	// stage content:
-	(lib.main = function(mode,startPosition,loop,reversed) {
-	if (loop == null) { loop = true; }
+	(lib.open_mouth = function(mode,startPosition,loop,reversed) {
+	if (loop == null) { loop = false; }
 	if (reversed == null) { reversed = false; }
 		var props = new Object();
 		props.mode = mode;
@@ -229,21 +229,29 @@
 		props.reversed = reversed;
 		cjs.MovieClip.apply(this,[props]);
 	
-		this.actionFrames = [0];
+		this.actionFrames = [0,6];
 		// timeline functions:
 		this.frame_0 = function() {
 			var _this = this;
-			
-			clickMe.addEventListener("mouseover",function(){
-			
+			/*
+			Play a Movie Clip/Video or the current timeline.
+			Plays the specified movie clip or video.
+			*/
 			_this.play();
-			});
+		}
+		this.frame_6 = function() {
+			var _this = this;
+			/*
+			Stop a Movie Clip/Video
+			Stops the specified movie clip or video.
+			*/
+			_this.stop();
 		}
 	
 		// actions tween:
-		this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(7));
+		this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(6).call(this.frame_6).wait(2));
 	
-		// open_mouth
+		// Layer_1
 		this.movieClip_2 = new lib.Symbol1();
 		this.movieClip_2.name = "movieClip_2";
 		this.movieClip_2.setTransform(209.6,216.05);
@@ -259,7 +267,7 @@
 		this.instance = new lib.T_head_open();
 		this.instance.setTransform(186.75,171.25,0.9514,1,0,0,0,72.1,82.7);
 	
-		this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.movieClip_2}]}).to({state:[{t:this.T_body},{t:this.T_head,p:{scaleX:1,scaleY:1,rotation:5.7732,x:217.4,y:209.5,regY:110.4}}]},1).to({state:[{t:this.T_body},{t:this.T_head,p:{scaleX:0.9999,scaleY:0.9999,rotation:9.479,x:217.35,y:209.45,regY:110.4}}]},1).to({state:[{t:this.T_body},{t:this.T_head,p:{scaleX:0.9273,scaleY:0.9999,rotation:9.479,x:217.35,y:209.5,regY:110.5}}]},1).to({state:[{t:this.T_body},{t:this.instance,p:{regX:72.1,scaleX:0.9514,x:186.75}}]},2).to({state:[{t:this.T_body},{t:this.instance,p:{regX:72,scaleX:1,x:186.6}}]},1).wait(1));
+		this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.movieClip_2}]}).to({state:[{t:this.T_body},{t:this.T_head,p:{scaleX:1,scaleY:1,rotation:5.7732,x:217.4,y:209.5,regY:110.4}}]},1).to({state:[{t:this.T_body},{t:this.T_head,p:{scaleX:0.9999,scaleY:0.9999,rotation:9.479,x:217.35,y:209.45,regY:110.4}}]},1).to({state:[{t:this.T_body},{t:this.T_head,p:{scaleX:0.9273,scaleY:0.9999,rotation:9.479,x:217.35,y:209.5,regY:110.5}}]},1).to({state:[{t:this.T_body},{t:this.instance,p:{regX:72.1,scaleX:0.9514,x:186.75}}]},2).to({state:[{t:this.T_body},{t:this.instance,p:{regX:72,scaleX:1,x:186.6}}]},1).wait(2));
 	
 		this._renderFirstFrame();
 	
@@ -267,7 +275,7 @@
 	p.nominalBounds = new cjs.Rectangle(314.6,284.9,-1.2000000000000455,48.700000000000045);
 	// library properties:
 	lib.properties = {
-		id: 'EE2BA846406B044FADEDD0BD75DFB390',
+		id: 'F9155DCE562A644E852E73AF3F56930B',
 		width: 400,
 		height: 400,
 		fps: 24,
@@ -310,7 +318,7 @@
 	};
 	
 	an.compositions = an.compositions || {};
-	an.compositions['EE2BA846406B044FADEDD0BD75DFB390'] = {
+	an.compositions['F9155DCE562A644E852E73AF3F56930B'] = {
 		getStage: function() { return exportRoot.stage; },
 		getLibrary: function() { return lib; },
 		getSpriteSheet: function() { return ss; },
