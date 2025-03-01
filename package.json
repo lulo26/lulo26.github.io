@@ -1,0 +1,24 @@
+{
+  "name": "twoey-clicker",
+  "version": "1.0.0",
+  "description": "twoey feeder clicker ",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lulo26/twoey-clicker.git"
+  },
+  "keywords": [
+    "javascript",
+    "game",
+    "clicker"
+  ],
+  "author": "lulo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lulo26/twoey-clicker/issues"
+  },
+  "homepage": "https://github.com/lulo26/twoey-clicker#readme"
+}
