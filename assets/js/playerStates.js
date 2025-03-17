@@ -36,6 +36,7 @@ export class Running extends State {
 
     enter(){
         this.player.frameY = 2
+        this.player.maxFrame = 4
 
     }
     handleInput(input){
