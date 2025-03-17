@@ -22,8 +22,7 @@ export class Player {
         this.currentState = this.states[0]
         this.currentState.enter()
     }
-    update(input, deltaTime){
-        this.currentState.handleInput(input)
+    update(deltaTime){
         // horizontal movement
         this.x += this.speed
         if (input.includes('ArrowRight')) this.speed = this.maxSpeed
@@ -49,12 +48,5 @@ export class Player {
     }
     draw(context){
         context.drawImage(this.image, this.frameX * this.width, this.frameY * this.height, this.width, this.height, this.x, this.y, this.width, this.height)
-    }
-    onGround(){
-        return this.y >= this.game.height - this.height
-    }
-    setState(state){
-        this.currentState = this.states[state]
-        this.currentState.enter()
     }
 }
